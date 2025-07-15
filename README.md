@@ -1,5 +1,5 @@
 # S73_Ayush_Capstone_GymTracker47
-# S73_Ayush_Capstone_GymTracker47
+
 
 ## GYM WORKOUT TRACKER WEB-SITE ##
 
