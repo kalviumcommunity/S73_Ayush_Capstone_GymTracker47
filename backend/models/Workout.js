@@ -22,5 +22,6 @@ const workoutSchema = new mongoose.Schema({
     default: Date.now
   }
 });
+const workout = mongoose.model('Workout', workoutSchema);
 
-module.exports = mongoose.model('Workout', workoutSchema);
+module.exports = workout;

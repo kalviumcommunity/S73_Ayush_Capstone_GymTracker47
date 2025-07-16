@@ -3,10 +3,12 @@ const Workout = require('../models/workout');
 // GET API - fetch all workouts
 const getAllWorkouts = async (req, res) => {
   try {
-    const workouts = await Workout.find().sort({ date: -1 }); 
-    res.status(200).json(workouts);
+    const workouts = await Workout.find({}); 
+    console.log('Fetched workouts:', workouts);
+    return res.status(200).json(workouts);
   } catch (err) {
     res.status(500).json({ error: 'Server Error', details: err.message });
+    console.log(err);
   }
 };
 
@@ -24,6 +26,7 @@ const createWorkout = async (req, res) => {
     const savedWorkout = await newWorkout.save();
     res.status(201).json(savedWorkout);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ error: 'Server Error', details: err.message });
   }
 };
